@@ -61,7 +61,7 @@ class flexibleAccess{
    * The database password
    * var string
    */
-  var $dbPass = '****';
+  var $dbPass = '***';
   /**
    * The database table that holds all the information
    * var string

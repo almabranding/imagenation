@@ -9,7 +9,7 @@ define('DB_TYPE', 'mysql');
 define('DB_HOST', 'mysql5-10.pro');
 define('DB_NAME','imagenation2');
 define('DB_USER', 'imagenation2');
-define('DB_PASS','*****');
+define('DB_PASS','***');
 
 define('LIBS', 'libs/');
 // The sitewide hashkey, do not change this because its used for passwords!

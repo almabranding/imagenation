@@ -11,7 +11,7 @@ if($_SERVER['SERVER_NAME']=='imagenation.es'){
 }
 $GLOBALS['DB_IP'] = 'mysql5-10.pro';
 $GLOBALS['DB_USER'] = 'imagenation2';
-$GLOBALS['DB_PASS'] = '******';
+$GLOBALS['DB_PASS'] = '***';
 $GLOBALS['DB_NAME'] = 'imagenation2';
 define('BASE','http://www.imagenation.es/');
 if(strstr($_SERVER['HTTP_HOST'],'localhost')){
