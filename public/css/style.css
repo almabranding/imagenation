@@ -1,0 +1,726 @@
+@charset "utf-8";
+/* CSS Document */
+/*@import url('http://fonts.googleapis.com/css?family=PT+Sans:400,700');*/
+@font-face {
+font-family: 'Helvetica Neue';
+src:    url(../fonts/helveticaneueroman.eot),
+        url(../fonts/HelveticaNeue-Roman.ttf) format(truetype),
+        url(../fonts/helveticaneueroman.svg) format(svg);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+font-family: DINCond;
+src:    url(../fonts/dincondregular.eot),
+        url(../fonts/dincondregular.ttf) format(truetype),
+        url(../fonts/dincondregular.otf),
+        url(../fonts/dincondregular.svg) format(svg);
+    font-weight: normal;
+    font-style: normal;   
+}
+@font-face {
+font-family: GillSans;
+src:    url(../fonts/gillsansstd.eot),
+        url(../fonts/gillsansstd.otf),
+        url(../fonts/gillsansstd.svg) format(svg);
+    font-weight: normal;
+    font-style: normal;    
+}
+@media screen and (max-width: 360px) {
+    
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 521px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 699px) {
+    nav.menu li{
+        border-bottom: 1px solid #CCCCCC;
+        float: none !important;
+        margin: auto !important;
+        padding-bottom: 5px;
+        text-align: center !important;
+        width: 83px !important;
+    }
+    .logo {
+        float: none !important;
+        height: 100px !important;
+        letter-spacing: 2px !important;
+        margin: auto !important;
+        min-width: 195px !important;
+        width: 100% !important;
+        left:0 !important;
+    }
+    .logo div{
+        float: none !important;
+        margin: auto !important;
+        min-width: 195px !important;
+        width: 100% !important;
+    }
+    nav.menu{
+        width: 100% !important;
+        margin:auto !important;
+        margin-top: 10px !important;
+    }
+    .pics_l_side {
+        float: none !important;
+        left: 0 !important;
+        margin: 20px auto 15px !important;
+        position: relative !important;
+        top: 0 !important;
+        width: 300px !important;
+    }
+    .pics_r_side {
+        margin: auto !important;
+        position: relative !important;
+    }
+    .contact_gallery{
+        min-width: 100% !important;
+    }
+    .contact_gallery li {
+        width: 100% !important;
+    }
+    .footer{
+        width: auto !important;
+    }
+    #cboxContent, #cboxContent div, #cboxContent img{
+        width: 100% !important;
+        height: auto;
+    }
+    #cboxMiddleLeft{
+        z-index: 100;
+        left: 0 !important;
+        position: absolute !important;
+    }
+    #cboxMiddleRight{
+         z-index: 100;
+        position: absolute !important;
+        right:0 !important;
+    }
+    #cboxPrevious{  
+        background: url("../images/arrowImages.png") no-repeat scroll left center transparent !important;
+        top: 70% !important;
+       /* bottom: 100px !important;
+        height: 50px !important;
+        left: 30% !important;
+        position: absolute !important;
+        width: 50px !important;
+        top: inherit !important;*/
+    }
+    #cboxLoadedContent{
+        overflow: hidden !important;
+    }
+    #cboxNext{
+        background: url("../images/arrowImages.png") no-repeat scroll right center transparent !important;
+        top: 70% !important;
+        /*bottom: 100px !important;
+        height: 50px !important;
+        right: 20% !important;
+        position: absolute !important;
+        width: 50px !important;
+        top: inherit !important;*/
+    }
+    #cboxLoadedContent img{
+        position: relative;
+        top: -70px !important;
+    }
+    #cboxClose{
+        display:none !important;
+        background: url("../images/arrowImages.png") no-repeat scroll -61px center transparent !important;
+        top: 63% !important;
+        color: transparent !important;
+        height: 50px !important;
+        left: 45% !important;
+        position: absolute !important;
+        right: 48% !important;
+        width: 48px !important;
+    }
+    .picoR{
+        display: none;
+    }
+    .footer_social>div {
+    float: none !important;
+    margin: auto !important;
+    width: 100px !important;
+    }
+    .footer_social{
+        width: 100% !important;
+        float: none !important;
+    }
+    .footer_text{
+        width: 100% !important;
+    }
+    .person_box{
+        width: 50% !important;
+    }
+    .contact_text{
+        width: 90% !important;
+    }
+}
+/*Elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    position: relative;
+}
+.container_gallery{
+    
+}
+.container_intranet{
+    width: 1200px;
+    margin:auto;
+}
+html, body {
+    height: 100%;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+body {
+    background:  #fff;
+    color:#333333;
+    font-size:11px;
+    text-align:center;
+    margin:0;
+    padding:0;
+    height: 100%;    
+    font-family:'Helvetica Neue', arial,sans-serif;
+}
+.bold{
+    font-weight: bold;
+}
+.logo{
+    color: #A8A8A8;
+    cursor: pointer;
+    float: left;
+    height: 100px;
+    letter-spacing: 2px;
+    margin: 0 20px 0;
+    min-width: 195px;
+    width: 200px;
+    position: relative;
+    left:20px;
+}
+.logo_img{
+    background: url("../images/logo.png") no-repeat scroll center center transparent;
+    height: 68px;
+    width: 100%;
+}
+header{
+    padding: 20px 0 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+nav.menu{
+    cursor: pointer;
+    float: left;
+    list-style: none outside none;
+    margin: 35px 0 0 35px;
+    text-transform: uppercase;
+    width: 300px;
+}
+nav.menu li{
+    color: #9C9D9F;
+    float: left;
+    font-size: 19px;
+    margin: 0 8px;
+    text-align: left;
+}
+nav.menu li:hover{
+    color: #777777;
+}
+.login{
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #AFAFAF;
+    border-radius: 2px 2px 2px 2px;
+    float: right;
+    left: 0;
+    list-style: none outside none;
+    margin: 0 0 0 10px;
+    padding: 3px 0 2px;
+    position: relative;
+    width: auto;
+}
+.login h2{
+    
+    text-align: left;
+    margin-bottom: 5px;
+}
+.login_caps{
+    font-size: 12px;
+}
+.login li{
+    color: #9C9D9F;
+    float: left;
+    margin: 0 2px;
+}
+.login_input{
+    background: none repeat scroll 0 0 #E1E1E1;
+    border-radius: 3px 3px 3px 3px;
+    color: #898989;
+    font-size: 10px;
+    height: 11px;
+    padding: 0 5px 2px;
+    width: 102px;
+}
+.ok_btn{
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #898989;
+    cursor: pointer;
+    font-size: 10px;
+    height: 13px;
+}
+ol,ul{
+    list-style: none outside none;
+}
+.body_gris{
+    background: #f5f3f4 !important;
+}
+.clr{
+    clear: both;
+    float: none !important;
+}
+.gallery_projects{
+    margin: 40px auto;
+    position: relative;
+}
+.person_box {
+    box-shadow: 0 0 0.3em #888888;
+    cursor: pointer;
+    margin: 10px auto;
+    min-width: 220px;
+    width: 95%;
+}
+.gallery_box {
+    box-shadow: 0 0 0.3em #888888;
+    cursor: pointer;
+    margin: 10px;
+    width: 260px;
+    float:left;
+}
+
+.gallery_box:hover{
+    box-shadow: 0 0 0.7em #000;
+}
+.gallery_box img{
+    width: 100%;
+}
+.gallery_box_info{
+    color: #000000;
+    font-size: 11px;
+    font-weight: normal;
+    height: auto;
+    letter-spacing: 1px;
+    line-height: 15px;
+    padding: 6px 10px 4px;
+    position: relative;
+    text-align: left;
+    width: 93%;
+}
+.gallery_info_title{
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.gallery_info_tr{
+   color: #666666;
+   font-weight: bold;
+}
+.gallery_info_name{
+    color:#999999;
+}
+
+.pico{
+    background: url('../images/pico.png')  no-repeat scroll 0px 0px transparent;  
+    width: 8px;
+    height: 4px;
+    position:absolute;
+    top:-4px;
+    right: 60px;
+}
+.picoR{
+    background: url("../images/picoR.png") no-repeat scroll 0 0 transparent;
+    height: 8px;
+    position: absolute;
+    right: -4px;
+    top: 7px;
+    width: 4px;
+}
+.pico_gallery{
+    background: url('../images/pico.png')  no-repeat scroll 0px 0px transparent;  
+    width: 8px;
+    height: 4px;
+    position:absolute;
+    top:-3px;
+    right: 60px;
+}
+.pics_l_side{
+    float: left;
+    margin: -4px 30px;
+    position: relative;
+    top: 0;
+    width: 300px;
+}
+.pics_r_side{
+    margin: 50px 0 70px 337px;
+    position: relative;
+}
+.reference_pic img {
+    width: 100%;
+    margin:10px 0;
+}
+.reference_box_info{
+    box-shadow: 0 0 1em #888888;
+}
+.pic_box{
+    float: left;
+    /*height: 195px;*/
+    margin: 5px;
+    overflow: hidden;
+    width: 294px;
+}
+.pic_box_h{
+    margin: 5px;
+    width: 598px;
+    float: left;
+    max-height: 310px;
+}
+.pic_box_v{
+    margin: 5px;
+    height: 400px;
+    float: left;
+    max-width: 294px
+}
+.pic_box_h img{    
+    min-height: auto !important;
+    width: 100% !important;
+}
+.pic_box_v img{    
+    min-width: auto !important;
+    height: 100% !important;
+}
+.pic_box img{
+    width: 100%;
+}
+.wrapper {    
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -43px; /* the bottom margin is the negative value of the footer's height */
+    min-width: 100%;
+}
+.leyend{
+    bottom: 10px;
+    color: #CCCCCC;
+    margin-left: 55px;
+    position: absolute;
+    z-index: 10;
+    /* -webkit-transform: rotate(+90deg);
+    -moz-transform: rotate(+90deg);
+    -ms-transform: rotate(+90deg);
+    -o-transform: rotate(+90deg);
+    transform: rotate(+90deg);
+
+    -webkit-transform-origin: 100% 0%;
+    -moz-transform-origin: 100% 0%;
+    -ms-transform-origin: 100% 0%;
+    -o-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;*/
+
+    /* Should be unset in IE9+ I think. */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+footer{    
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-top: 1px solid #CCCCCC;
+    bottom: 0;
+    color: #777777;
+    position: absolute;
+    width: 100%;
+}
+.footer{
+    margin: auto;
+    height: 43px; 
+}
+.footer_text{
+    float: left;
+    font-size: 10px;
+    letter-spacing: 1px;
+    list-style: none outside none;
+    min-width: 152px;
+    position: relative;
+    text-align: center;
+    margin-top: 14px;
+    width: 70%;
+}
+.footer_text  li{
+    float:left;
+}
+.footer_social{
+    float: left;
+    min-width: 100px;
+    position: relative;
+    width: 30%;
+}
+.footer_social div{
+    width: 23px;
+    height: 23px;
+    margin: 5px 0 0 5px;
+    float:left;
+}
+.social:hover{
+    opacity: 0.7;
+}
+.social_fb{
+    background: url('../images/social.png')  no-repeat scroll 0px 0px transparent;
+}
+.social_vi{
+    background: url('../images/social.png')  no-repeat scroll -27px 0px transparent;
+}
+.social_tw{
+    background: url('../images/social.png')  no-repeat scroll -55px 0px transparent;
+}
+.social_in{
+    background: url('../images/social.png')  no-repeat scroll -83px 0px transparent;
+}
+.social_g{
+    background: url('../images/social.png')  no-repeat scroll -111px 0px transparent;
+    margin-right: 0px !important;
+}
+.back_arrow{
+   margin-right: 5px;
+   text-align: left;
+   padding-left: 24px;
+   font-size: 15px;
+   color:#9C9D9F;
+   margin-top: 10px;
+   background: url('../images/back_arrow.png')  no-repeat scroll left top transparent; 
+   height: 19px;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+.top_arrow {
+    bottom: 80px;
+    margin: auto;
+    position: relative;
+    text-transform: none !important;
+}
+.back_arrow:hover{
+   color:#777777;
+}
+.contact_box{
+    width: 720px;
+    margin:auto;
+    text-align: left;
+    clear: both;
+    font-size: 12px;
+}
+.contact_company{
+    float:left;
+    width: 25%;
+}
+.contact_scheme{
+    border-left:1px solid #222;
+    padding-left:50px;
+    float:left;
+    width: 25%;
+}
+.contact_box_info {
+    color: #000000;
+    font-size: 11px;
+    font-weight: normal;
+    height: auto;
+    letter-spacing: 1px;
+    line-height: 15px;
+    padding: 8px 10px 4px;
+    position: relative;
+    text-align: left;
+    width: 350px;
+}
+.contact_face{
+    overflow: hidden;
+}
+.contact_face img{
+    width: 100%;
+}
+.contact_info_title{
+    text-transform: uppercase;
+    color: #666666;
+    font-weight: bold;
+}
+.contact_info_name{
+    color: #666666;
+    font-size: 11px;   
+}
+.contact_gallery{
+    clear: left;
+    margin: 45px auto;
+    min-width: 1000px;
+    position: relative;
+    width: 95%;
+}
+.contact_gallery .gallery_box:hover{
+    box-shadow:0 0 0.3em #888888;
+}
+#floater {
+    float: left;
+    height: 50%;
+    margin-bottom: -115px;
+    position: relative;
+    width: 1px;
+}
+.contact_gallery li{
+    display: inline;
+    float: left;
+    margin: 0;
+    min-width: 201px;
+    width: 25%;
+}
+.v_card{
+    background: url("../images/vcard.jpg") no-repeat scroll 0 0 transparent;
+    bottom: 6px;
+    color: #135DAB;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    text-decoration: underline;
+    width: 40px;
+}
+#white_full {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+#white_box {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    height: auto;
+    left: 50%;
+    margin-left: -146px;
+    margin-top: -115px;
+    padding: 10px;
+    position: fixed;
+    top: 30%;
+    width: auto;
+    z-index: 200;
+}
+input[type="text"], input[type="password"] {
+    border: 1px solid #ACACAC;
+    border-radius: 4px 4px 4px 4px;
+    color: #555555;
+    display: inline;
+    font-family: HelveticaNeue;
+    font-size: 11px;
+    height: 14px;
+    padding: 0px 6px;
+    width: 100px;
+}
+label {
+    display: block;
+    float: left;
+    line-height: 18px;
+    margin: 0 10px 0 0;
+    padding: 3px 10px 0 0;
+    position: relative;
+    text-align: left;
+    width: 50px;
+}
+.btn {
+    background-color: #7D7D7D;
+    border: 1px solid #676767;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 1px 5px;
+    text-align: center;
+    width: 60px;
+}
+form p{
+    margin: 5px 0;
+}
+.login{
+      margin-left: -105px !important;
+      margin-top: -18px !important;
+}
+.embed{
+    margin-left: -375px !important;
+}
+.embedVideo{
+    background: url("../images/embedVideo.png") no-repeat scroll center center rgba(255,255,255,0.5);
+  
+    /*background: none repeat scroll 0 0 #000000;*/
+    height: 100%;
+    
+    position: absolute;
+    width: 100%;
+}
+#leyenda{
+    background-color: #FFFFFF;
+    left: 20px;
+    position: fixed;
+    top: 20px;
+    width: 200px;
+    z-index: 10000;
+    position: fixed;
+    opacity: 0.7;
+}
+.contact_line{
+    width: 400px;
+    border-top: 1px solid #CCCCCC;
+    margin: 40px auto;
+    top:20px;
+    position: relative;
+}
+.contact_text{
+    font-size: 12px;
+    line-height: 21px;
+    margin: auto;
+    width: 50%;
+    padding-bottom: 45px;
+}
+.creditos{
+    text-transform: capitalize;
+}
+.reference_pic{
+    top:10px;
+    position: relative;
+}
+.reference_pic img{
+    display: none;
+}
+.gallery_box_info a:hover{
+    text-decoration: underline;
+}
+#arrowTop{
+    background: url("../images/arrowTop.png") no-repeat scroll center -2px transparent;
+    font-size: 12px;
+    height: 15px;
+    opacity: 0.7;
+    padding-left: 44px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}

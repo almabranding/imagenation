@@ -1,0 +1,17 @@
+#beneficios_content_text_box textarea.title{
+	color: #58585A;
+    font-family: arial;
+    font-size: 20px;
+    font-weight: bold;
+	display:block;
+}
+#beneficios_content_text_box textarea.info{
+	color: #58585A;
+    font-family: arial;
+    font-size: 18px;
+	margin-top:15px;
+	display:block;
+}
+p{
+	
+}

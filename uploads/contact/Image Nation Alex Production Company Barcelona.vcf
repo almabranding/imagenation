@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Marti;Alex;;;
+FN:Image Nation Alex Production Company Barcelona
+ORG:Image Nation Alex Production Company Barcelona;
+TITLE:Studio Manager
+EMAIL;type=INTERNET;type=WORK;type=pref:alex@imagenation.es
+TEL;type=WORK;type=pref:00 34 93 295 40 44
+item1.ADR;type=WORK;type=pref:;;Merce 26\, Ppal. 2;Barcelona;Barcelona;08002;Spain
+item1.X-ABADR:es
+X-AIM;type=WORK;type=pref:http\://www.imagenation.es
+X-ABShowAs:COMPANY
+CATEGORIES:AAImage Nation
+X-ABUID:F07C2858-54CD-48F5-A722-3D62C69A5238\:ABPerson
+END:VCARD

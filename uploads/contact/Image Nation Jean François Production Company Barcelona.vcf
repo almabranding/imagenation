@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Rioche;Jean-François;;;
+FN:Image Nation Jean-François Production Company Barcelona
+ORG:Image Nation Jean-François Production Company Barcelona;
+TITLE:Executive Producer
+EMAIL;type=INTERNET;type=WORK;type=pref:jfrioche@imagenation.es
+TEL;type=WORK;type=pref:00 34 93 295 40 44
+TEL;type=HOME:00 34 670 82 35 47
+item1.ADR;type=WORK;type=pref:;;Merce 26\, Ppal. 2;Barcelona;Barcelona;08002;Spain
+item1.X-ABADR:es
+X-AIM;type=WORK;type=pref:http\://www.imagenation.es
+item2.X-ABRELATEDNAMES;type=pref:jfrioche
+item2.X-ABLabel:skype
+X-ABShowAs:COMPANY
+CATEGORIES:AAImage Nation
+X-ABUID:380955D6-DE34-4DF4-9FE4-0E4765197EB5\:ABPerson
+END:VCARD

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Beneficios_group" value="name:id;datatype:int,name:Beneficios_type;datatype:string,name:img;datatype:string" />
+	<infoitem key="UD_Beneficio" value="name:id;datatype:int,name:beneficios_type;datatype:string,name:beneficios_group;datatype:string,name:Title_ES;datatype:blob,name:Text_ES;datatype:blob,name:Title_EN;datatype:blob,name:Text_EN;datatype:blob,name:Title_FR;datatype:blob,name:Text_FR;datatype:blob,name:Title_PR;datatype:blob,name:Text_PR;datatype:blob,name:Title_CA;datatype:blob,name:Text_CA;datatype:blob" />
+</info>

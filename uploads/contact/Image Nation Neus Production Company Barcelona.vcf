@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Julià;Neus;;;
+FN:Image Nation Neus Production Company Barcelona
+ORG:Image Nation Neus Production Company Barcelona;
+TITLE:Accountant
+EMAIL;type=INTERNET;type=WORK;type=pref:neus@imagenation.es
+TEL;type=WORK;type=pref:00 34 93 295 40 44
+item1.ADR;type=WORK;type=pref:;;Merce 26\, Ppal. 2;Barcelona;Barcelona;08002;Spain
+item1.X-ABADR:es
+X-AIM;type=WORK;type=pref:http\://www.imagenation.es
+item2.X-ABRELATEDNAMES;type=pref:imagenationbcn
+item2.X-ABLabel:skype
+X-ABShowAs:COMPANY
+CATEGORIES:AAImage Nation
+X-ABUID:B264A9F4-B955-4D12-A5CE-B2D3082A8D11\:ABPerson
+END:VCARD

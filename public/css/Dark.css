@@ -1,0 +1,17 @@
+nav.menu li{
+    color: #9C9D9F !important;
+}
+nav.menu li:hover{
+    color: #777777  !important;
+}
+.logo{
+    color:#fff !important;
+}
+.logo_img{
+    background: url('../images/logo.png')  no-repeat scroll center 0px transparent; 
+    height: 64px;  
+    width: 196px;
+}
+.leyend{
+    color: #9C9D9F !important;
+}

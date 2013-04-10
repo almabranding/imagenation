@@ -1,0 +1,14 @@
+User-agent: * 
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /controller/
+Disallow: /templates/
+Disallow: /css/
+Disallow: /jquery/
+Disallow: /js/
+Disallow: /xajax/
+Disallow: /tests/
+Disallow: /modules/
+Disallow: /logs/
+Disallow: /Pager/
+Disallow: /PSDs/

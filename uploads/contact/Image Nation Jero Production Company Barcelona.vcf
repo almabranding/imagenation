@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Pellicer Hummelsheim;Jeronimo;;;
+FN:Image Nation Jero Production Company Barcelona
+ORG:Image Nation Jero Production Company Barcelona;
+TITLE:Executive Producer
+EMAIL;type=INTERNET;type=WORK;type=pref:jero@imagenation.es
+TEL;type=WORK;type=pref:00 34 93 295 40 44
+TEL;type=CELL:00 34 646 277 959
+item1.ADR;type=WORK;type=pref:;;Merce 26\, Ppal. 2;Barcelona;Barcelona;08002;Spain
+item1.X-ABADR:es
+X-AIM;type=WORK;type=pref:http\://www.imagenation.es
+item2.X-ABRELATEDNAMES;type=pref:jeropellicer
+item2.X-ABLabel:skype
+X-ABShowAs:COMPANY
+CATEGORIES:AAImage Nation,ZZJero
+X-ABUID:F687B079-29E8-4118-B42D-992C82C9F430\:ABPerson
+END:VCARD
