@@ -1,4 +1,4 @@
 imagenation
 ===========
 
-Imagenation web
+iImagenation Web
