@@ -5,15 +5,22 @@ SetEnv PHP_VER 5
 Options +FollowSymlinks
 RewriteEngine On
 RewriteBase /
+ExpiresActive On
+ExpiresDefault A0
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|JPG)(\.gz)?$">
+ExpiresDefault A29030400
+Header append Cache-Control "public"
+Header unset ETag
+FileETag None
+</FilesMatch>
 #ErrorDocument 500 /?page=error&msg=interror
-ErrorDocument 404 /?page=error&msg=wrongurl
-ErrorDocument 403 /?page=error&msg=forbidden
-ErrorDocument 401 /?page=error&msg=auth
-RewriteRule ^(.*)$ imagenation/index.php?url=$1 [QSA,L]
+#ErrorDocument 404 /?page=error&msg=wrongurl
+#ErrorDocument 403 /?page=error&msg=forbidden
+#ErrorDocument 401 /?page=error&msg=auth
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 #RewriteRule ^captcha/(.*)$ /modules/captcha/cryptographp.php&%{QUERY_STRING} [L]
 #RewriteRule ^error/(.*)/$ ?page=error&msg=$1&%{QUERY_STRING} [L]
 #RewriteRule ^photo/(.*)/$ ?page=photo&id=$1&%{QUERY_STRING} [L]

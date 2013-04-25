@@ -3,6 +3,29 @@
 <head>  
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Image Nation | Photo & Motion Production Company</title>
+<?php
+if($this->projectInfo){
+    foreach($this->projectInfo as $value){
+       $ogdesc='
+        Photographer: '.$value['photo'].'
+        Prod. Company: '.$value['prod'].'
+        Agency: '.$value['agency'].'
+        Location: '.$value['location']; 
+       $ogname=$value['name'];
+       $ogimg='http://imagenation.es/uploads/'.$value['id'].'/'.$value['avatar'];
+    }
+}else{
+    $ogname='Image nation';
+    $ogimg='http://www.imagenation.es/public/images/logo.png';
+    $ogdec='Based in Barcelona, Spain, Image Nation is a full service, multilingual production company specialized in still photography and motion shoots';
+}
+
+?>
+<meta property = "og:title" content = "<?php echo $ogname;?>" />
+<meta property = "og:description" content = "<?php echo $ogdesc;?>" />
+<meta property = "og:type" content = "website" />
+<meta property = "og:image" content = "<?php echo $ogimg;?>" />
+<meta property = "og:site_name" content = "Image nation" />
 <meta property="og:site_name" content="Image Nation" />
 <meta name="description" content="Based in Barcelona, Spain, Image Nation is a full service, multilingual production company specialized in still photography and motion shoots.Our clients include Adidas, Alfa Romeo, Audi, BMW, Citroën, Fujitsu, GQ, Kia, Mercedes, Opel, Porsche, Seat, Sedus, Stihl, Toyota, Vodafone, Volkswagen, etc. and their publicity agencies. The Image Nation team can operate in English, German, French, Spanish and Catalan.Although Image Nation's primary focus is to provide top-quality photo and motion production services in Southern Europe, we have now expanded our purview to offer services to international agencies, production companies, photographers and director's worldwide.At client request, we produce campaigns in North America, South America, Asia, North and South Africa. To this end, Image Nation has built up a network of partners all over the world, giving us access to top-quality production services and facilities wherever we go." />
 <meta name="keywords" content="Image Nation, Barcelona,Production Company, Photo,Film, Motion, Photo Production Worldwide, Film Production Worldwide, Motion Production Worldwide, Film Service Company, Commercial Production Company, " />
@@ -17,22 +40,7 @@
 <script>google.load("jquery", "1");</script>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="<?php echo URL?>public/js/jquery.colorbox.js"></script>
-<script src="<?php echo URL?>public/js/jquery.ez-bg-resize.js"></script>
-<script src="<?php echo URL?>public/js/functions.js"></script>
-<script src="<?php echo URL?>public/js/jquery.masonry.min.js"></script>
 
-<script src="<?php echo URL?>public/js/cufon-yui.js"></script>
-<script src="<?php echo URL?>public/js/DINCond-Regular_500.font.js"></script>
-<script src="<?php echo URL?>public/js/Helvetica_55_Roman_400.font.js"></script>
-<script src="<?php echo URL?>public/js/Gill_Sans_Std_400.font.js"></script>
-
-<script type="text/javascript">
-    /*Cufon.set('fontSize', '11px').replace('body span,body p', { fontFamily: 'Helvetica 55 Roman'});*/
-    Cufon.set('fontSize', '22px').replace('.menu', { fontFamily: 'DINCond-Regular'});
-    Cufon.set('fontSize', '22px').replace('.back_arrow', { fontFamily: 'DINCond-Regular'});
-    Cufon.set('fontSize', '12px').replace('.logo p', { fontFamily: 'Gill Sans Std'});
-</script>
 <body ondragstart="return false" style="overflow: auto;">
 <div class="wrapper">
 <header class="header">

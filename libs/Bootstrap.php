@@ -3,6 +3,7 @@
 class Bootstrap {
 
     private $_url = null;
+    private $_cache = null;
     private $_controller = null;
     
     private $_controllerPath = 'controllers/'; // Always include trailing slash
@@ -19,7 +20,10 @@ class Bootstrap {
     {
         // Sets the protected $_url
         $this->_getUrl();
+        $this->_getCache();
         require LIBS. $this->_ZebraForm;
+        if(!empty($this->_url[0]))
+            $this->loadCache();
         // Load the default controller if no URL is set
         // eg: Visit http://localhost it loads Default Controller
         if (empty($this->_url[0])) {
@@ -32,7 +36,30 @@ class Bootstrap {
      
    
     }
-    
+    /**
+     * Check if the page is cached
+     */
+    public function loadCache()
+    {
+        
+        $cachetime = 30 * 60; // 5 minutes
+        $cachefile = ROOT."cache/".$this->_cache.".html";
+        if (file_exists($cachefile)&& (time() - $cachetime< filemtime($cachefile))) {  
+
+
+           include($cachefile);
+
+           echo "<!-- Cached ".date('H:i', filemtime($cachefile))." 
+           -->";
+
+
+           exit;
+        }
+
+
+		 // start the output buffer
+        ob_start();
+    }
     /**
      * (Optional) Set a custom path to controllers
      * @param string $path
@@ -78,6 +105,14 @@ class Bootstrap {
         $url = rtrim($url, '/');
         $url = filter_var($url, FILTER_SANITIZE_URL);
         $this->_url = explode('/', $url);
+    }
+    private function _getCache()
+    {
+        $url = isset($_GET['url']) ? $_GET['url'] : null;
+        $url = rtrim($url, '/');
+        $url = filter_var($url, FILTER_SANITIZE_URL);
+        if(empty($url)) $url='index';
+        $this->_cache = str_replace('/', '.', $url) ;
     }
     
     /**

@@ -30,5 +30,12 @@
     </div>
 </footer>
 </div>
+<script src="<?php echo BASE?>public/js/jquery.colorbox.js"></script>
+<script src="<?php echo BASE?>public/js/jquery.ez-bg-resize.js"></script>
+<script src="<?php echo BASE?>public/js/jquery.masonry.min.js"></script>
+<script src="<?php echo BASE?>public/js/cufon-yui.js"></script>
+<script src="<?php echo BASE?>public/js/DINCond-Regular_500.font.js"></script>
+<script src="<?php echo BASE?>public/js/Gill_Sans_Std_400.font.js"></script>
+<script src="<?php echo BASE?>public/js/custom.js"></script>
 </body>
 </html>

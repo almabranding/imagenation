@@ -3,6 +3,7 @@ class Works extends Controller {
 
     function __construct() {
         parent::__construct();
+        $this->view->js = array('works/js/custom.js');
     }
     function index() {
         $this->view->projectList = $this->model->lista();

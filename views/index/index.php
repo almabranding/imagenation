@@ -29,8 +29,9 @@ elseif($value['style']=='Black') $color='#4c4c4c';
             document.location = "<?php echo URL.'works';?>";
             }
 
-            Cufon.set('fontSize', '12px').set('color', '<?php echo $color;?>').replace('.logo p', { fontFamily: 'Gill Sans Std'});
+            
             $(document).ready(function() {
+                Cufon.set('fontSize', '12px').set('color', '<?php echo $color;?>').replace('.logo p', { fontFamily: 'Gill Sans Std'}); 
                 $("body").ezBgResize({
                         img     : "<?php echo URL.'uploads/background/'.$value['file'];?>", // Relative path example.  You could also use an absolute url (http://...).
                         opacity : 1, // Opacity. 1 = 100%.  This is optional.

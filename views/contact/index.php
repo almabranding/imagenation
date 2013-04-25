@@ -1,15 +1,17 @@
 <div id="container" class="contact_gallery clr">
 <div style="width: 100%;max-width: 1800px; margin: auto;"> <ul>
-    <?php foreach($this->getContacts as $key=>$value){ ?>
+    <?php foreach($this->getContacts as $key=>$value){ 
+        $email = explode("@",$value['mail']);
+        ?>
     <li>
         <div class="person_box box">
-            <a href='mailto:<?php echo $value['mail'];?>'><div class="contact_face"><img src="uploads/contact/<?php echo $value['img'];?>"></div></a>
+            <a href="javascript:void(null)" onClick="address('<?php echo $email[0];?>');"><div class="contact_face"><img src="uploads/contact/<?php echo $value['img'];?>"></div></a>
             <div class="gallery_box_info">
                 <div class="pico_gallery"></div>
                 <span class="contact_info_title"><?php echo $value['name'];?></span><br>
                 <span class="contact_info_name"><?php echo $value['job'];?></span><br>
                 <span class="contact_info_name"><?php echo $value['tel'];?></span><br>
-                <a href="mailto:<?php echo $value['mail'];?>"><span class="contact_info_name"><?php echo $value['mail'];?></span></a><br>
+                <a href="javascript:void(null)" onClick="address('<?php echo $email[0];?>');"><span class="contact_info_name"><img src="/public/images/mail<?php echo $value['id'];?>.jpg"></span></a><br>
                 <?php if($value['vcard']!='') echo '<a href="uploads/contact/'.$value['vcard'].'">';?><div class="v_card"></div><?php if($value['vcard']!='') echo '</a>';?>
             </div>
         </div>

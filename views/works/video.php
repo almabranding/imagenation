@@ -17,7 +17,7 @@
 </div>
 <div id="pics_r_side" class="pics_r_side">
     <div id="content" class="clearfix transitions-enabled" style="margin:auto;">
-        <iframe src="http://player.vimeo.com/video/<?php echo $value['urlVideo'] ?>?autoplay=1" width="<?php echo $value['wVideo'] ?>" height="<?php echo $value['hVideo'] ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe src="http://player.vimeo.com/video/<?php echo $value['urlVideo'] ?>" width="<?php echo $value['wVideo'] ?>" height="<?php echo $value['hVideo'] ?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
     </div>
 </div>
  <div class="clr"></div>
