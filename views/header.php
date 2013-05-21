@@ -6,10 +6,10 @@
 <?php
 if($this->projectInfo){
     foreach($this->projectInfo as $value){
-       $ogdesc='
-        Photographer: '.$value['photo'].'
-        Prod. Company: '.$value['prod'].'
-        Agency: '.$value['agency'].'
+       $ogdesc=
+        'Photographer: '.$value['photo'].' - 
+        Agency: '.$value['agency'].' - 
+        Prod. Company: '.$value['prod'].' - 
         Location: '.$value['location']; 
        $ogname=$value['name'];
        $ogimg='http://imagenation.es/uploads/'.$value['id'].'/'.$value['avatar'];

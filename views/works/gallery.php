@@ -7,15 +7,15 @@
                 <div class="picoR"></div>
                 <span class="gallery_info_title"><?php echo $value['name']; ?></span><br>
                 <span class="gallery_info_tr">Photographer</span> <?php if ($value['photoLink'] != '') echo '<a href="' . $value['photoLink'] . '" target="_blank">'; ?><span class="gallery_info_name"><?php echo $value['photo']; ?></span><?php if ($value['photoLink'] != '') echo '</a>'; ?><br>
-                <span class="gallery_info_tr">Prod. Company</span> <?php if ($value['prodLink'] != '') echo '<a href="' . $value['prodLink'] . '" target="_blank">'; ?><span class="gallery_info_name"><?php echo $value['prod']; ?></span><?php if ($value['prodLink'] != '') echo '</a>'; ?><br>
                 <span class="gallery_info_tr">Agency</span> <?php if ($value['agencyLink'] != '') echo '<a href="' . $value['agencyLink'] . '" target="_blank">'; ?><span class="gallery_info_name"><?php echo $value['agency']; ?></span><?php if ($value['agencyLink'] != '') echo '</a>'; ?><br>
+                <span class="gallery_info_tr">Prod. Company</span> <?php if ($value['prodLink'] != '') echo '<a href="' . $value['prodLink'] . '" target="_blank">'; ?><span class="gallery_info_name"><?php echo $value['prod']; ?></span><?php if ($value['prodLink'] != '') echo '</a>'; ?><br>
                 <span class="gallery_info_tr">Location</span> <span class="gallery_info_name"><?php echo $value['location']; ?></span><br>
             </div>
             <div id="leyenda" class="reference_box_info gallery_box_info" style="display:none;">
                 <span class="gallery_info_title"><?php echo $value['name']; ?></span><br>
                 <span class="gallery_info_tr">Photographer</span> <?php if ($value['photoLink'] != '') echo '<a href="' . $value['photoLink'] . '" target="_blank">'; ?><span class="gallery_info_name"><?php echo $value['photo']; ?></span><?php if ($value['photoLink'] != '') echo '</a>'; ?><br>
-                <span class="gallery_info_tr">Prod. Company</span> <?php if ($value['prodLink'] != '') echo '<a href="' . $value['prodLink'] . '" target="_blank">'; ?><span class="gallery_info_name"><?php echo $value['prod']; ?></span><?php if ($value['prodLink'] != '') echo '</a>'; ?><br>
                 <span class="gallery_info_tr">Agency</span> <?php if ($value['agencyLink'] != '') echo '<a href="' . $value['agencyLink'] . '" target="_blank">'; ?><span class="gallery_info_name"><?php echo $value['agency']; ?></span><?php if ($value['agencyLink'] != '') echo '</a>'; ?><br>
+                <span class="gallery_info_tr">Prod. Company</span> <?php if ($value['prodLink'] != '') echo '<a href="' . $value['prodLink'] . '" target="_blank">'; ?><span class="gallery_info_name"><?php echo $value['prod']; ?></span><?php if ($value['prodLink'] != '') echo '</a>'; ?><br>
                 <span class="gallery_info_tr">Location</span> <span class="gallery_info_name"><?php echo $value['location']; ?></span><br>
             </div>
             <a href="<?php echo URL . 'works'; ?>"><div class="back_arrow">Back to works</div></a>

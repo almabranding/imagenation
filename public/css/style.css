@@ -384,6 +384,7 @@ ol,ul{
 }
 .reference_box_info{
     box-shadow: 0 0 1em #888888;
+    z-index: 10;
 }
 .pic_box{
     float: left;
@@ -396,7 +397,7 @@ ol,ul{
     margin: 5px;
     width: 598px;
     float: left;
-    max-height: 310px;
+    /*max-height: 310px;*/
 }
 .pic_box_v{
     margin: 5px;
@@ -428,7 +429,7 @@ ol,ul{
     color: #CCCCCC;
     margin-left: 55px;
     position: absolute;
-    z-index: 10;
+    z-index: 11;
     /* -webkit-transform: rotate(+90deg);
     -moz-transform: rotate(+90deg);
     -ms-transform: rotate(+90deg);
@@ -706,6 +707,10 @@ form p{
 }
 .reference_pic{
     top:10px;
+    position: relative;
+}
+.reference_pic a{
+    z-index: 10;
     position: relative;
 }
 .reference_pic img{
