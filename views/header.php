@@ -12,24 +12,25 @@ if($this->projectInfo){
         Prod. Company: '.$value['prod'].' - 
         Location: '.$value['location']; 
        $ogname=$value['name'];
-       $ogimg='http://imagenation.es/uploads/'.$value['id'].'/'.$value['avatar'];
+       $ogimg=($value['fb'])?'http://imagenation.es/uploads/'.$value['id'].'/'.$value['fb']:'http://imagenation.es/uploads/'.$value['id'].'/'.$value['avatar'];
     }
+    
 }else{
     $ogname='Image nation';
-    $ogimg='http://www.imagenation.es/public/images/logo.png';
+    $ogimg='http://www.imagenation.es/public/images/logoBig.png';
     $ogdec='Based in Barcelona, Spain, Image Nation is a full service, multilingual production company specialized in still photography and motion shoots';
 }
 
 ?>
+<meta property = 'og:url' content='<?='http://www.imagenation.es'.$_SERVER['REQUEST_URI']?>' />
+<meta property = 'og:image' content='<?=$ogimg?>' />
 <meta property = "og:title" content = "<?php echo $ogname;?>" />
 <meta property = "og:description" content = "<?php echo $ogdesc;?>" />
 <meta property = "og:type" content = "website" />
-<meta property = "og:image" content = "<?php echo $ogimg;?>" />
 <meta property = "og:site_name" content = "Image nation" />
-<meta property="og:site_name" content="Image Nation" />
 <meta name="description" content="Based in Barcelona, Spain, Image Nation is a full service, multilingual production company specialized in still photography and motion shoots.Our clients include Adidas, Alfa Romeo, Audi, BMW, Citroën, Fujitsu, GQ, Kia, Mercedes, Opel, Porsche, Seat, Sedus, Stihl, Toyota, Vodafone, Volkswagen, etc. and their publicity agencies. The Image Nation team can operate in English, German, French, Spanish and Catalan.Although Image Nation's primary focus is to provide top-quality photo and motion production services in Southern Europe, we have now expanded our purview to offer services to international agencies, production companies, photographers and director's worldwide.At client request, we produce campaigns in North America, South America, Asia, North and South Africa. To this end, Image Nation has built up a network of partners all over the world, giving us access to top-quality production services and facilities wherever we go." />
 <meta name="keywords" content="Image Nation, Barcelona,Production Company, Photo,Film, Motion, Photo Production Worldwide, Film Production Worldwide, Motion Production Worldwide, Film Service Company, Commercial Production Company, " />
-<meta name="author" content="http://www.almabranding.com" />
+<meta name="author" content="http://www.imagenation.es" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet" type="text/css" href="<?php echo URL?>public/css/style.css" />
@@ -42,6 +43,7 @@ if($this->projectInfo){
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <body ondragstart="return false" style="overflow: auto;">
+<?php include('analytics.php')?>
 <div class="wrapper">
 <header class="header">
     <a href="<?php echo URL;?>">

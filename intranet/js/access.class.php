@@ -40,13 +40,14 @@ class flexibleAccess{
    */
    
    
-    var $dbName = 'imagenation2';
+    var $dbName = 'imagenat_nation2RF';
   /**
    * The database host
    * var string
    */
  // var $dbHost = 'db385108974.db.1and1.com';
-  var $dbHost = 'mysql5-10.pro';
+  var $dbHost = 'localhost';
+   // var $dbHost = 'mysql5-10.pro';
   /**
    * The database port
    * var int
@@ -56,12 +57,12 @@ class flexibleAccess{
    * The database user
    * var string
    */
-  var $dbUser = 'imagenation2';
+  var $dbUser = 'imagenat_uNati93';
   /**
    * The database password
    * var string
    */
-  var $dbPass = 'Ry8SZ2AY';
+  var $dbPass = 's)iX%=rbRlcb';
   /**
    * The database table that holds all the information
    * var string
@@ -121,7 +122,7 @@ class flexibleAccess{
    */
   function flexibleAccess($dbConn = '', $settings = '')
   {
-       
+ 
 	    if ( is_array($settings) ){
 		    foreach ( $settings as $k => $v ){
 				    if ( !isset( $this->{$k} ) ) die('Property '.$k.' does not exists. Check your settings.');
@@ -129,14 +130,18 @@ class flexibleAccess{
 			}
 	    }
 	    $this->remCookieDomain = $this->remCookieDomain == '' ? $_SERVER['HTTP_HOST'] : $this->remCookieDomain;
+            
 	    $this->dbConn = ($dbConn=='')? mysql_connect($this->dbHost.':'.$this->dbPort, $this->dbUser, $this->dbPass):$dbConn;
 	    if ( !$this->dbConn ) die(mysql_error($this->dbConn));
+           
 	    mysql_select_db($this->dbName, $this->dbConn)or die(mysql_error($this->dbConn));
+            
 	    if( !isset( $_SESSION ) ) session_start();
 	    if ( !empty($_SESSION[$this->sessionVariable]) )
 	    {
 		    $this->loadUser( $_SESSION[$this->sessionVariable] );
 	    }
+            
 	    //Maybe there is a cookie?
 	    if ( isset($_COOKIE[$this->remCookieName]) && !$this->is_loaded()){
 	      //echo 'I know you<br />';
@@ -166,6 +171,7 @@ class flexibleAccess{
 		}
 		$res = $this->query("SELECT * FROM `{$this->dbTable}` 
 		WHERE `{$this->tbFields['login']}` = '$uname' AND `{$this->tbFields['pass']}` ='$password2' LIMIT 1",__LINE__);
+               
                 if ( @mysql_num_rows($res) == 0)
 			return false;
 		if ( $loadUser )

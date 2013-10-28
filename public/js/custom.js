@@ -37,7 +37,7 @@ function gallery(){
     $("a.embedClick").on('click', function(event){
         event.preventDefault();
         var url = $(this).attr("href");
-        $('#white_box').html('<iframe src="'+url+'?autoplay=1" width="597" height="336" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+        $('#white_box').html('<iframe src="'+url+'?autoplay=1" width="800" height="453" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
         $('#white_box').removeClass().addClass('embed').addClass('hide');
         $('.hide').css('display','inherit');
         return false;

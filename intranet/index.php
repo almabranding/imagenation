@@ -4,14 +4,11 @@
 Basic login example with php user class
 http://phpUserClass.com
 */
-if(strstr($_SERVER['HTTP_HOST'],'localhost')){
-    require_once 'js/access.class.alma.php';
-   
-}
-if(strstr($_SERVER['HTTP_HOST'],'imagenation.es')){
+require_once 'Database.php';
     require_once 'js/access.class.php';
-}
 
+
+    
 $user = new flexibleAccess();
 //if ( isset($_GET['logout']) ) 
 //if ( $_GET['logout'] == 1 ) 
@@ -33,9 +30,7 @@ if ( !$user->is_loaded() )
 }else{
   //User is loaded
   header('Location: works.php');
-  echo '<a href="'.$_SERVER['PHP_SELF'].'?logout=1">logout</a>';
 }
-
 ?>
 
 <!DOCTYPE html>

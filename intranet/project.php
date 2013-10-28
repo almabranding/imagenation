@@ -9,6 +9,7 @@ if (!isset($_SESSION))session_start();  $_SESSION['lang']='ES';
 include_once("functions/functions.php");
 $consulta=new Consulta();
 $fileElementName = 'fileToUpload';
+$fileFB = 'fbToUpload';
 $uploads_dir="../uploads";
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -61,8 +62,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         
         $uploads_dir=$uploads_dir.'/'.$id;
         $consulta->setConsulta('SELECT * FROM project WHERE id=' . $id);
+        $fbFile=$consulta->getData('fb');
         $avatar=$consulta->getData('avatar');
         $nameFile=$consulta->getData('img');  
+        if(empty($_FILES[$fileFB]['tmp_name']) || $_FILES[$fileFB]['tmp_name'] == 'none')
+        {
+        }else 
+        {
+            $tmp_name = $_FILES[$fileFB]["tmp_name"];
+            $pathinfo = pathinfo($_FILES[$fileFB]["name"]);
+            $ext='.'.$pathinfo['extension'];
+            $file = uniqid($pathinfo['filename'].'_');
+            $fbFile=$file.$ext;
+            move_uploaded_file($tmp_name, "$uploads_dir/$fbFile");
+        }
         if(empty($_FILES[$fileElementName]['tmp_name']) || $_FILES[$fileElementName]['tmp_name'] == 'none')
         {
         }else 
@@ -88,9 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             $dst_r = ImageCreateTrueColor( $targ_w, $targ_h );
             imagecopyresampled($dst_r,$img_r,0,0,$_POST['x']*$rel,$_POST['y']*$rel,$targ_w,$targ_h,$_POST['w']*$rel,$_POST['h']*$rel);
         }
-      
-        $consulta->setConsulta('UPDATE project SET name="'.$name.'",img="'.$nameFile.'",avatar="'.$avatar.'",photo="'.$photographer.'",director="'.$director.'",prod="'.$production.'",scompany="'.$scompany.'",agency="'.$agency.'",location="'.$location.'",urlVideo="'.$urlVideo.'",wVideo="'.$wVideo.'",hVideo="'.$hVideo.'",video="'.$video.'",dop="'.$dop.'",dopLink="'.$dopLink.'",scompanyLink="'.$scompanyLink.'",photoLink="'.$photoLink.'",agencyLink="'.$agencyLink.'",prodLink="'.$productionLink.'",directorLink="'.$directorLink.'" WHERE id="'.$id.'"');
-	imagejpeg($dst_r,$srcD,$jpeg_quality);
+        $consulta->setConsulta('UPDATE project SET name="'.$name.'",img="'.$nameFile.'",avatar="'.$avatar.'",fb="'.$fbFile.'",photo="'.$photographer.'",director="'.$director.'",prod="'.$production.'",scompany="'.$scompany.'",agency="'.$agency.'",location="'.$location.'",urlVideo="'.$urlVideo.'",wVideo="'.$wVideo.'",hVideo="'.$hVideo.'",video="'.$video.'",dop="'.$dop.'",dopLink="'.$dopLink.'",scompanyLink="'.$scompanyLink.'",photoLink="'.$photoLink.'",agencyLink="'.$agencyLink.'",prodLink="'.$productionLink.'",directorLink="'.$directorLink.'" WHERE id="'.$id.'"');
+        imagejpeg($dst_r,$srcD,$jpeg_quality);
     }
     if (isset($_POST['delete'])) {
         $consulta->setConsulta('SELECT * FROM images WHERE id=' . $_POST['id']);
@@ -293,6 +305,12 @@ function updateListItem(itemId, newStatus) {
                         <label class="file-upload">
                             <span><strong>Thumbnail</strong></span>
                             <input type="file" name="fileToUpload" />
+                        </label>
+                    </div>
+                    <div class="field" style="clear:both; height: 40px;width: 100%;">
+                        <label class="file-upload">
+                            <span><strong>Facebook</strong></span>
+                            <input type="file" name="fbToUpload" />
                         </label>
                     </div>
                     <input type="hidden" id="file" name="file" value="<?php echo $file;?>"/>

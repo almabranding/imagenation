@@ -1,7 +1,5 @@
 <?PHP
-if(strstr($_SERVER['HTTP_HOST'],'localhost')){
-    require_once 'js/access.class.alma.php';
-}
+
 if(strstr($_SERVER['HTTP_HOST'],'imagenation.es')){
     require_once 'js/access.class.php';
 }
